@@ -186,6 +186,28 @@ Arithmetic
     Sets *res* to the inverse of *x*. Division by zero
     calls *flint_abort*.
 
+Powering
+--------------------------------------------------------------------------------
+
+    These functions return `0` when the operation would imply unreasonable arithmetic.
+
+.. function:: int fmpz_mpoly_q_pow_fmpz(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B, const fmpz_t k, const fmpz_mpoly_ctx_t ctx)
+
+    Set *A* to *B* raised to the *k*-th power.
+    Return `1` for success and `0` for failure.
+
+.. function:: int fmpz_mpoly_q_pow_ui(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B, ulong k, const fmpz_mpoly_ctx_t ctx)
+
+    Set *A* to *B* raised to the *k*-th power.
+    Return `1` for success and `0` for failure.
+
+.. function:: int fmpz_mpoly_q_pow_si(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B, slong k, const fmpz_mpoly_ctx_t ctx)
+
+    Set *A* to *B* raised to the *k*-th power.
+    Return `1` for success and `0` for failure.
+
+
+
 Content
 -------------------------------------------------------------------------------
 

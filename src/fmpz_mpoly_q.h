@@ -128,6 +128,18 @@ void fmpz_mpoly_q_neg(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpo
 void fmpz_mpoly_q_add(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpoly_q_t y, const fmpz_mpoly_ctx_t ctx);
 void fmpz_mpoly_q_sub(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpoly_q_t y, const fmpz_mpoly_ctx_t ctx);
 void fmpz_mpoly_q_mul(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpoly_q_t y, const fmpz_mpoly_ctx_t ctx);
+
+/* Powering ******************************************************************/
+
+int fmpz_mpoly_q_pow_fmpz(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B,
+                          const fmpz_t k, const fmpz_mpoly_ctx_t ctx);
+
+int fmpz_mpoly_q_pow_ui(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B,
+                        ulong k, const fmpz_mpoly_ctx_t ctx);
+
+int fmpz_mpoly_q_pow_si(fmpz_mpoly_q_t A, const fmpz_mpoly_q_t B,
+                          slong k, const fmpz_mpoly_ctx_t ctx);
+
 void fmpz_mpoly_q_div(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpoly_q_t y, const fmpz_mpoly_ctx_t ctx);
 
 void fmpz_mpoly_q_inv(fmpz_mpoly_q_t res, const fmpz_mpoly_q_t x, const fmpz_mpoly_ctx_t ctx);
